@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-5-17 16:05:29 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.ptis.ssh.entities.Comment" table="COMMENT">
+        <id name="commitId" type="java.lang.Integer">
+            <column name="COMMITID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="user" class="com.ptis.ssh.entities.User" fetch="join">
+            <column name="USER" />
+        </many-to-one>
+        <property name="tourismId" type="java.lang.Integer">
+            <column name="TOURISMID" />
+        </property>
+        <property name="content" type="java.lang.String">
+            <column name="CONTENT" />
+        </property>
+        <property name="commentStar" type="java.lang.Integer">
+            <column name="COMMENTSTAR" />
+        </property>
+        <property name="CreateTime" type="java.lang.String">
+            <column name="CREATETIME" />
+        </property>
+    </class>
+</hibernate-mapping>

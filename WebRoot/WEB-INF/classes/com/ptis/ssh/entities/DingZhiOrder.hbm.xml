@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.ptis.ssh.entities.DingZhiOrder" table="DINGZHIORDER">
+        <id name="DingZhiOrderId" type="java.lang.Integer">
+            <column name="DINGZHIORDERID" />
+            <generator class="native" />
+        </id>
+        <property name="userId" type="java.lang.Integer">
+            <column name="USERID" />
+        </property>
+        <property name="UserName" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="UserPhone" type="java.lang.String">
+            <column name="USERPHONE" />
+        </property>
+        <property name="UserEmail" type="java.lang.String">
+            <column name="USEREMAIL" />
+        </property>
+        <property name="UserCompany" type="java.lang.String">
+            <column name="USERCOMPANY" />
+        </property>
+        <property name="StartPlace" type="java.lang.String">
+            <column name="STARTPLACE" />
+        </property>
+        <property name="EndPlace" type="java.lang.String">
+            <column name="ENDPLACE" />
+        </property>
+        <property name="StartTime" type="java.util.Date">
+            <column name="STARTTIME" />
+        </property>
+        <property name="EndTime" type="java.util.Date">
+            <column name="ENDTIME" />
+        </property>
+        <property name="PersonAmount" type="java.lang.Integer">
+            <column name="PERSONAMOUNT" />
+        </property>
+        <property name="Budget" type="java.lang.Integer">
+            <column name="BUDGET" />
+        </property>
+        <property name="Days" type="java.lang.Integer">
+            <column name="DAYS" />
+        </property>
+        <property name="TripWay" type="java.lang.String">
+            <column name="TRIPWAY" />
+        </property>
+        <property name="Addition" type="java.lang.String">
+            <column name="ADDITION" />
+        </property>
+        <property name="OrderType" type="java.lang.String">
+            <column name="ORDERTYPE" />
+        </property>
+    </class>
+</hibernate-mapping>

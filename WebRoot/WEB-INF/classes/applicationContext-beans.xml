@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+     
+     <!-- Dao -->
+	<bean id="employeeDao" class="com.ptis.ssh.dao.EmployeeDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="departmentDao" class="com.ptis.ssh.dao.DepartmentDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="userDao" class="com.ptis.ssh.dao.impl.UserDaoImpl">
+	    <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean  id="tourismDao" class="com.ptis.ssh.dao.impl.TourismDaoImpl">
+	    <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="travelNoteDao" class="com.ptis.ssh.dao.impl.TravelNoteDaoImpl"> 
+	     <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="orderDao" class="com.ptis.ssh.dao.impl.OrderDaoImpl">
+	     <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="dingZhiOrderDao" class="com.ptis.ssh.dao.impl.DingZhiOrderDaoImpl">
+	     <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="commentDao" class="com.ptis.ssh.dao.impl.CommentDaoImpl">
+	      <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- Service -->
+	<bean id="departmentService" class="com.ptis.ssh.service.DepartmentService">
+		<property name="departmentDao" ref="departmentDao"></property>
+	</bean>
+	<bean id="employeeService" class="com.ptis.ssh.service.EmployeeService">
+		<property name="employeeDao" ref="employeeDao"></property>
+	</bean>
+	<bean id="userService" class="com.ptis.ssh.service.impl.UserServiceImpl">
+	    <property name="userDao" ref="userDao"></property>
+	</bean>
+	<bean id="tourismService" class="com.ptis.ssh.service.impl.TourismServiceImpl">
+	    <property name="tourismDao" ref="tourismDao"></property>
+	</bean>
+	<bean id="noteService" class="com.ptis.ssh.service.impl.TravelNoteServiceImpl">
+	    <property name="travelNoteDao" ref="travelNoteDao"></property>
+	</bean>
+	<bean id="orderService" class="com.ptis.ssh.service.impl.OrderServiceImpl">
+	    <property name="orderDao" ref="orderDao"></property>
+	</bean>
+	<bean id="dingZhiOrderService" class="com.ptis.ssh.service.impl.DingZhiOrderServiceImpl">
+	    <property name="dingZhiOrderDao" ref="dingZhiOrderDao"></property>
+	</bean>
+	<bean id="commentService" class="com.ptis.ssh.service.impl.CommentServiceImpl">
+	    <property name="commentDao" ref="commentDao"></property>
+	</bean>
+	
+	<!-- Action -->
+	<bean id="employeeAction" class="com.ptis.ssh.actions.EmployeeAction"
+		scope="prototype">
+		<property name="employeeService" ref="employeeService"></property>
+		<property name="departmentService" ref="departmentService"></property>
+	</bean>
+	<bean id="userAction" class="com.ptis.ssh.actions.UserAction" scope="prototype">
+	    <property name="userService" ref="userService"></property>
+	</bean>
+	<bean id="tourismAction" class="com.ptis.ssh.actions.TourismAction" scope="prototype">
+	     <property name="tourismService" ref="tourismService"></property>
+	</bean>
+	<bean id="travelNoteAction" class="com.ptis.ssh.actions.TravelNoteAction" scope="prototype">
+	      <property name="noteService" ref="noteService"></property>
+	</bean>
+    <bean id="orderAction" class="com.ptis.ssh.actions.OrderAction" scope="prototype">
+         <property name="orderService" ref="orderService"></property>
+         <property name="dingZhiOrderService" ref="dingZhiOrderService"></property>
+    </bean>
+    <bean id="dingZhiOrderAction" class="com.ptis.ssh.actions.DingZhiOrderAction" scope="prototype">
+         <property name="dingZhiOrderService" ref="dingZhiOrderService"></property>
+    </bean>
+    <bean id="commentAction" class="com.ptis.ssh.actions.CommentAction">
+    </bean>
+     
+</beans>

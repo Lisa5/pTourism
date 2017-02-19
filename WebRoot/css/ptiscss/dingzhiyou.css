@@ -1,0 +1,301 @@
+body{
+	font-family: "Microsoft YaHei";
+	font-size: 14px;
+}
+.tripbox b, .trip_price label {
+    color: #666;
+}
+h1, h2, h3, h4, h5, h6, strong, th, b {
+    font-weight: 400;
+}
+.main_content {
+   /* background: url(http://pic4.40017.cn/index/slide/2016/03/21/17/WiMIbN.jpg) no-repeat top center #FFF;
+   */
+    background-color: #f6f6f6;
+    padding-top: 85px;
+    height: 1407px;
+    margin: 0 auto;
+}
+.content {
+   /* width: 870px;
+    margin: 0 auto;
+    vertical-align: middle;
+    padding: 38px 0 35px;
+    background: #FFF;*/
+    width: 910px;
+    margin: 0 auto;
+    vertical-align: middle;
+    padding: 38px 20px 35px 20px;
+    background: #FFF;
+    /* margin: 20px; */
+    /* padding: 10px; */
+    /* border: 2px; */
+    border-radius: 10px;
+}
+.me_needTrip {
+    margin-bottom: 50px;
+    width: 870px;
+}
+.me_needTrip span {
+    width: 80px;
+    text-align: right;
+}
+.me_needTrip span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #666;
+    line-height: 30px;
+    margin-right: 17px;
+}
+.common_title {
+    width: 870px;
+    height: 47px;
+    line-height: 47px;
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 50px;
+    border-bottom: 1px dashed #ddd;
+}
+.make_person, .you_name, .you_phone, .mail_box, .company_box {
+    margin-top: 12px;
+    margin-left: 157px;
+}
+.make_person {
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.me_needTrip .make_person .common_circle, .trip_every .common_circle {
+    width: 510px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.make_person, .you_name, .you_phone, .mail_box, .company_box {
+    margin-top: 12px;
+    margin-left: 157px;
+}
+.me_needTrip input {
+    width: 212px;
+}
+.me_needTrip input, .trip_from input, .trip_time input, .where_to input {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+    box-shadow: .5px 1px 1px #f0f0f0 inset;
+    border: 1px solid #ddd;
+}
+input, select, textarea, button {
+    vertical-align: middle;
+    font-size: 100%;
+    outline: 0;
+    font-family: 'Microsoft YaHei',Arial,sans-serif;
+}
+.c_tip_info {
+    padding-left: 28px;
+    height: 20px;
+    line-height: 20px;
+    background: url(http://img1.40017.cn/cn/c/order/s/2015/perInfo.0.1.png?v=2015081106) no-repeat 8px -361px;
+    display: inline-block;
+}
+.invalid_message_right {
+    background: none repeat scroll 0 0 #fff7dc;
+    border: 1px solid #f4e09d;
+    color: #666;
+    font: 12px/30px "Microsoft YaHei";
+    height: 30px;
+    padding-right: 7px;
+    width: auto;
+    display: inline;
+    margin-left: 6px;
+    position: relative;
+}
+
+label {
+    cursor: default;
+}
+.contect_you {
+    margin-bottom: 52px;
+}
+.trip_from, .trip_time, .trip_day, .trip_num, .where_to, .trip_price {
+    margin: 12px 0 0 170px;
+}
+/*
+.trip_from, .where_to {
+    margin-left: 0;
+    position: relative;
+}
+.where_to {
+    margin-top: -3px;
+    margin-left: 76px;
+    position: relative;
+}*/
+.trip_from input {
+    width: 212px;
+}
+.me_needTrip input, .trip_from input, .trip_time input, .where_to input {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+    box-shadow: .5px 1px 1px #f0f0f0 inset;
+    border: 1px solid #ddd;
+}
+div.popcitylist {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 16px 2px rgba(0,0,0,.2);
+    font-size: 12px;
+    border: 1px solid #ddd;
+}
+.popcitylist {
+    left: 77px;
+    top: 45px;
+    z-index: 1;
+}
+.none {
+    display: none;
+}
+.recom-city {
+    padding: 18px 10px 13px;
+}
+.recom-city {
+    z-index: 3;
+    width: 385px;
+    background: #fff;
+}
+.trip_time {
+    margin-top: 1px;
+    margin-left: 0;
+}
+.tripbox, .triplist, .trip_price div {
+    display: inline-block;
+}
+.tripbox .day_nub, .triplist input, .trip_price input {
+    padding: 0 8px;
+    height: 30px;
+    line-height: 30px;
+    width: 102px;
+    box-shadow: .5px 1px 1px #f0f0f0 inset;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size:14px;
+}
+
+.trip_price {
+    overflow: hidden;
+}
+.otherInfo_write {
+    width: 700px;
+    padding-left: 170px;
+}
+.trip_every {
+    margin-left: 0;
+}
+.trip_other {
+    overflow: hidden;
+    margin-top: 12px;
+    margin-left: 0;
+}
+.main_content .trip_every div.common_circle {
+    width: 451px;
+}
+.trip_every a.nomal {
+    line-height: 34px;
+}
+.trip_every a {
+    width: 88px;
+    height: 34px;
+}
+.me_needTrip .make_person a, .trip_every a {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+    text-align: center;
+    position: relative;
+    color: #333;
+    font-size: 16px;
+    float: left;
+}
+.me_needTrip .make_person a.sel, .trip_every a.sel {
+    border: 1px solid #ff7800;
+}
+.me_needTrip .make_person a.nomal {
+    line-height: 38px;
+}
+.me_needTrip .make_person a {
+    width: 97px;
+    height: 38px;
+}
+.trip_other textarea.nomal {
+    color: #999;
+}
+.trip_other textarea {
+    font-size: 14px;
+    line-height: 18px;
+    width: 510px;
+    height: 90px;
+    box-shadow: .5px 1px 1px #f0f0f0 inset;
+    border: 1px solid #DDD;
+    padding: 9px;
+}
+.to_otherPage a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 207px;
+    height: 46px;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 46px;
+    text-align: center;
+    background: #ff7800;
+    border-radius: 3px;
+    margin-top: 40px;
+    margin-left: 257px;
+}
+.trip_from>span, .trip_time>span, .trip_day>span, .trip_num>span, .trip_every>span, .trip_other>span, .where_to span, .trip_price span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #666;
+    line-height: 30px;
+    margin-right: 18px;
+    width: 65px;
+    float: left;
+    text-align: right;
+}
+.me_needTrip i, .trip_from>span i, .trip_time>span i, .trip_day>span i, .trip_num>span i, .trip_every>span i, .trip_other>span i, .where_to>span i {
+    font-family: "Î¢ÈíÑÅºÚ";
+    color: #ff4000;
+    /*vertical-align: text-top;
+    margin-right: 7px;*/
+}
+.me_needTrip .make_person a.sel:after, .trip_every a.sel:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-position: 0 0;
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.icon-sprite, .icon-icon01, .icon-icon02, .icon-icon03, .me_needTrip .make_person a.sel:after, .trip_every a.sel:after, .contect_you>a.otherInfo i, .contect_you>a.otherInfo_need i {
+    background-image: url(http://img1.40017.cn/cn/c/other/customization/icon-on.png);
+    background-repeat: no-repeat;
+}
+.temstr-margin{
+	margin-top: 700px !important;
+    margin-left: 429px !important;
+}
+.content-width{
+	width: 301px !important;
+}

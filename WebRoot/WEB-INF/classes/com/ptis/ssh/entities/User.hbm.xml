@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-5-10 23:14:28 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.ptis.ssh.entities.User" table="USER">
+        <id name="userId" type="java.lang.Integer">
+            <column name="USERID" />
+            <generator class="native" />
+        </id>
+        <property name="userName" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="userPwd" type="java.lang.String">
+            <column name="USERPWD" />
+        </property>
+        <property name="userEmail" type="java.lang.String">
+            <column name="USEREMAIL" />
+        </property>
+        <property name="userSex" type="java.lang.Integer">
+            <column name="USERSEX" />
+        </property>
+        <property name="userProfessional" type="java.lang.String">
+            <column name="USERPROFESSIONAL" />
+        </property>
+        <property name="registerTime" type="java.util.Date">
+            <column name="REGISTERTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

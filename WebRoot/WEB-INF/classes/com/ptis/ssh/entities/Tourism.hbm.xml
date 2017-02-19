@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-5-11 20:58:16 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.ptis.ssh.entities.Tourism" table="TOURISM">
+        <id name="tourismId" type="java.lang.Integer">
+            <column name="TOURISMID" />
+            <generator class="native" />
+        </id>
+        <property name="typeId" type="java.lang.Integer">
+            <column name="TYPEID" />
+        </property>
+        <property name="tourismTitle" type="java.lang.String">
+            <column name="TOURISMTITLE" />
+        </property>
+        <property name="tourismSubtitle" type="java.lang.String">
+            <column name="TOURISMSUBTITLE" />
+        </property>
+        <property name="price" type="java.lang.Float">
+            <column name="PRICE" />
+        </property>
+        <property name="tourismPraise" type="java.lang.Integer">
+            <column name="TOURISMPRAISE" />
+        </property>
+        <property name="departurePlace" type="java.lang.String">
+            <column name="DEPARTUREPLACE" />
+        </property>
+        <property name="destinationPlace" type="java.lang.String">
+            <column name="DESTINATIONPLACE" />
+        </property>
+        <property name="recommendIntro" type="java.lang.String">
+            <column name="RECOMMENDINTRO" />
+        </property>
+        <property name="tourismImg" type="java.lang.String">
+            <column name="TOURISMIMG" />
+        </property>
+        <property name="bookNotice" type="java.lang.String">
+            <column name="BOOKNOTICE" />
+        </property>
+        <property name="costDesc" type="java.lang.String">
+            <column name="COSTDESC" />
+        </property>
+        <property name="packages" type="java.lang.String">
+            <column name="PACKAGES" />
+        </property>
+        <property name="tourDays" type="java.lang.Integer">
+            <column name="TOURDAYS" />
+        </property>
+        <property name="tourSpecial" type="java.lang.String">
+            <column name="TOURSPECIAL" />
+        </property>
+        <property name="fit" type="java.lang.String">
+            <column name="FIT" />
+        </property>
+    </class>
+</hibernate-mapping>

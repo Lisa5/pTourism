@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=WebRoot/WEB-INF/scripts/jquery.js,WebRoot/scripts/lang/ko.js,WebRoot/scripts/lang/zh-CN.js,WebRoot/WEB-INF/scripts/jquery-1.12.3.min.js,WebRoot/WEB-INF/scripts/jquery-2.2.3.min.js,WebRoot/scripts/zh_CN.js,WebRoot/WEB-INF/views/jquery.js,WebRoot/scripts/lang/zh-TW.js,WebRoot/scripts/plugins/code/prettify.js
+validator.Unchecked=

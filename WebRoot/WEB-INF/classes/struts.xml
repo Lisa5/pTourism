@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="default" namespace="/" extends="struts-default">
+
+		<interceptors>
+			<!-- 登陆验证拦截器 <interceptor name="authority" class="com.ptis.ssh.interceptor.AuthorityInterceptor"></interceptor> -->
+			<interceptor-stack name="sshStack">
+				<!-- 将登陆验证拦截器加入默认的拦截器栈中 <interceptor-ref name="authority"> <param name="excludeMethods">Login</param> 
+					</interceptor-ref> -->
+				<interceptor-ref name="paramsPrepareParamsStack">
+					<param name="prepare.alwaysInvokePrepare">false</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="sshStack"></default-interceptor-ref>
+		<!-- 全局变量,超时返回登录页面 -->
+		<global-results>
+			<result name="login">/WEB-INF/views/login.jsp</result>
+		</global-results>
+
+		<action name="emp-*" class="employeeAction" method="{1}">
+			<result name="list">     <!-- 对应action里方法的返回值 -->
+				/WEB-INF/views/emp-list.jsp
+			</result>
+			<result type="stream" name="ajax-success">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+
+			<result name="success" type="redirect">/emp-list</result>
+			<result name="input">/WEB-INF/views/emp-input.jsp</result>
+		</action>
+		<!-- 注册用户 -->
+		<action name="userRegister-*" class="com.ptis.ssh.actions.UserAction"
+			method="{1}">
+			<result type="stream" name="ajax-success">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+			<result name="register">/WEB-INF/views/register.jsp</result>
+			<result name="success">/views/success.jsp</result>
+			<result name="input">/WEB-INF/views/register.jsp</result>
+			<result name="failed">/WEB-INF/views/register.jsp</result>
+		</action>
+		<!-- 用户登录 -->
+		<action name="userLogin-*" class="com.ptis.ssh.actions.UserAction"
+			method="{1}">
+			<result name="login">/WEB-INF/views/login.jsp</result>
+			<result name="loginsuccess">/index.jsp</result>
+			<result name="loginfailed">/WEB-INF/views/login.jsp</result>
+		</action>
+		<!-- 用户信息 -->
+		<action name="user-*" class="com.ptis.ssh.actions.UserAction" method="{1}">
+		    <result name="userinfo">/views/myinfo.jsp</result>
+		      <result name="logout">/WEB-INF/views/login.jsp</result>
+		    
+		</action>
+		<!-- 旅游近景点显示 -->
+		<action name="tourism-*" class="com.ptis.ssh.actions.TourismAction"
+			method="{1}">
+			<result name="tourismInfo">/views/tourisminfo.jsp</result>
+			<result name="tourismList">/views/indexinfo.jsp</result>
+			<result name="tourismType1">/views/tourismList.jsp</result>
+			<result name="tourismType2">/views/tourismList.jsp</result>	
+			<result name="tourismType3">/views/tourismList.jsp</result>	
+			<result name="tourismType4">/views/tourismList.jsp</result>	
+		    <result name="tourismsearch">/views/tourismList.jsp</result>		
+		</action>
+
+		<!-- 用户游记 -->
+		<action name="note-*" class="com.ptis.ssh.actions.TravelNoteAction"
+			method="{1}">
+			<result name="input">/views/notesuccess.jsp</result>
+			<result name="success">/views/notelist.jsp</result>	
+			<result name="login">/WEB-INF/views/login.jsp</result>	
+				
+		</action>
+		<!-- 用户订单 -->
+		<action name="order-*" class="com.ptis.ssh.actions.OrderAction" method="{1}">
+		    <result name="orderlist">/views/orderlist.jsp</result>
+		    <result name="saveorder">/views/dingzhisuccess.jsp</result>
+		    <result name="login">/WEB-INF/views/login.jsp</result>		    
+		</action>
+		<!-- 定制游订单 -->
+		<action name="dingzhi-*" class="com.ptis.ssh.actions.DingZhiOrderAction" method="{1}">
+		    <result name="success">/views/dingzhisuccess.jsp</result>
+		    <result name="login">/WEB-INF/views/login.jsp</result>
+		    <result name="savepreper">/views/dingzhiyou.jsp</result>		 
+		</action>
+		<!-- 评论 -->
+		<action name="comment-*" class="com.ptis.ssh.actions.CommentAction" method="{1}">
+		    <result name="savecomment">/index.jsp</result>
+		    <result name="makecomment">/views/comment.jsp</result>	
+		    <result name="login">/WEB-INF/views/login.jsp</result>	    
+		</action>
+	
+	</package>
+</struts>
